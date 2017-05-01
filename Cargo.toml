@@ -1,0 +1,10 @@
+[package]
+name = "qubed"
+version = "0.1.0"
+authors = ["Cormac O'Brien <cormac@c-obrien.org>"]
+
+[dependencies]
+approx = "0.1.1"
+nalgebra = "0.12.1"
+num = "0.1"
+rand = "0.3"
