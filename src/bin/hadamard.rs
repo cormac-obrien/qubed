@@ -23,11 +23,16 @@ use qubed::Qubit;
 use qubed::complex::Complex64;
 
 fn main() {
+    let ha = qubed::hadamard(1);
+    let hb = qubed::hadamard(1);
+
+    let h2 = qubed::kronecker_product(&ha.matrix, &hb.matrix);
+
     let simulations: usize = 10000000;
 
     println!("Running {} simulations", simulations);
 
-    let h = qubed::hadamard();
+    let h = qubed::hadamard(1);
     let qubit = Qubit::new(Complex64::zero(), Complex64::one()).unwrap();
     let result = qubit.apply(&h).unwrap();
 
